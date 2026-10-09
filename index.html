@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para ti ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="heart">♥</div>
+    <div class="eyebrow">Un pequeño regalo para ti</div>
+    <h1>Feliz cumpleaños,<br>mi amor</h1>
+    <p>Hay algo que quiero decirte antes de que abras tu regalo...</p>
+    <button onclick="document.getElementById('carta').scrollIntoView()">Abrir mi regalo ✨</button>
+  </div>
+  <footer>Hecho especialmente para ti</footer>
+</section>
+
+<section id="carta">
+  <div class="wrap">
+    <div class="eyebrow">Una carta para ti</div>
+    <h2>Mi amor ❤️</h2>
+    <div class="card">
+      <p class="letter">Aquí irá tu mensaje personal.
+
+Puedes escribir todo lo que quieras decirle: recuerdos, agradecimientos, lo que significa para ti y lo feliz que te hace compartir la vida con ella.
+
+Esta parte la personalizaremos juntos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="wrap">
+    <div class="eyebrow">Ahora quiero que veas algo</div>
+    <h2>Esto es para ti 🎥</h2>
+    <div class="video-placeholder">
+      <div class="play">▶</div>
+    </div>
+    <p>Aquí colocaremos tu video de cumpleaños.</p>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="wrap">
+    <div class="eyebrow">Nuestros recuerdos</div>
+    <h2>Nosotros 📸</h2>
+    <div class="gallery">
+      <div class="photo">Foto 1</div>
+      <div class="photo">Foto 2</div>
+      <div class="photo">Foto 3</div>
+      <div class="photo">Foto 4</div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="heart">♥</div>
+    <h2>Y esto apenas comienza...</h2>
+    <p>Quiero seguir compartiendo contigo muchísimos cumpleaños, recuerdos, aventuras y momentos.</p>
+    <p style="color:var(--accent2);font-size:26px">Te amo. ❤️</p>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{}));
+</script>
+</body>
+</html>

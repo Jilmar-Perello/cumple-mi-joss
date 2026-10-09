@@ -1,0 +1,352 @@
+/* =========================================
+   FUENTES DE GOOGLE
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+/* =========================================
+   COLORES
+========================================= */
+:root {
+  --bg: #120b12;
+  --surface: #21131f;
+  --text: #fff7fb;
+  --muted: #d8bfcf;
+  --accent: #e8a6bd;
+  --accent2: #f5d3df;
+  --line: rgba(255,255,255,.12);
+
+  --font-title: "Varela Round", sans-serif;
+  --font-hand: 'Caveat', cursive;
+  --font-ui: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-title);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrap {
+  width: min(720px, 100%);
+  text-align: center;
+}
+
+/* =========================================
+   TEXTOS PEQUEÑOS
+========================================= */
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  line-height: 1.8;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* =========================================
+   TITULOS ELEGANTES
+========================================= */
+h1,
+h2 {
+  font-family: var(--font-title);
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(42px, 10vw, 78px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin: 18px 0;
+}
+
+h2 {
+  font-size: clamp(32px, 7vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+/* =========================================
+   TEXTO GENERAL
+========================================= */
+p {
+  font-family: var(--font-title);
+  font-size: clamp(17px, 4vw, 21px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* =========================================
+   LETRA MANUSCRITA
+========================================= */
+.handwritten,
+.letter,
+.final h2 {
+  font-family: var(--font-hand);
+  font-weight: 500;
+  font-optical-sizing: auto;
+}
+
+.handwritten {
+  font-size: clamp(30px, 7vw, 44px);
+  line-height: 1.3;
+  color: var(--accent2);
+}
+
+/* Carta de amor */
+.letter {
+  white-space: pre-line;
+  font-size: clamp(25px, 5.5vw, 35px);
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+button,
+.button {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  padding: 15px 28px;
+
+  background: var(--accent);
+  color: #24101b;
+
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .02em;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  transition: transform .25s ease,
+              box-shadow .25s ease,
+              background .25s ease;
+}
+
+button:hover,
+.button:hover {
+  transform: translateY(-3px);
+  background: var(--accent2);
+  box-shadow: 0 14px 35px rgba(232,166,189,.2);
+}
+
+/* =========================================
+   PORTADA
+========================================= */
+.hero {
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #4a2138 0,
+      #241321 40%,
+      var(--bg) 78%
+    );
+}
+
+.heart {
+  font-size: 54px;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+/* =========================================
+   TARJETA DE LA CARTA
+========================================= */
+.card {
+  width: 100%;
+  padding: 36px;
+
+  background: rgba(255,255,255,.045);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+
+  text-align: left;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,.15);
+}
+
+/* =========================================
+   VIDEO
+========================================= */
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    #2e1828,
+    #0d080d
+  );
+
+  border: 1px solid var(--line);
+
+  display: grid;
+  place-items: center;
+
+  margin: 25px 0;
+}
+
+.play {
+  width: 76px;
+  height: 76px;
+
+  border-radius: 50%;
+  background: var(--accent);
+
+  display: grid;
+  place-items: center;
+
+  color: #2a1020;
+  font-family: var(--font-ui);
+  font-size: 30px;
+
+  transition: transform .25s ease;
+}
+
+.play:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================
+   GALERIA
+========================================= */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.photo {
+  aspect-ratio: 1;
+
+  background: #2a1925;
+  border: 1px dashed var(--line);
+  border-radius: 18px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 10px;
+  color: var(--muted);
+
+  font-family: var(--font-ui);
+  font-size: 13px;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   CIERRE ROMANTICO
+========================================= */
+.final {
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      #492037,
+      #120b12 70%
+    );
+}
+
+.final h2 {
+  font-size: clamp(42px, 9vw, 68px);
+  line-height: 1.15;
+  color: var(--accent2);
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================================
+   PIE DE PAGINA
+========================================= */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+
+  width: 100%;
+  padding: 0 15px;
+
+  text-align: center;
+  color: #a98c9e;
+
+  font-family: var(--font-ui);
+  font-size: 12px;
+}
+
+/* =========================================
+   MOVILES
+========================================= */
+@media (max-width: 520px) {
+  section {
+    padding: 45px 18px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
